@@ -13,6 +13,8 @@ EMCEE_REPORTS=${EMCEE_REPORTS:-""}
 EMCEE_RUNNER=${EMCEE_RUNNER:-""}
 EMCEE_TESTS_APP_PATH=${EMCEE_TESTS_APP_PATH:-""}
 EMCEE_WAIT_FOR_FINISH=${EMCEE_WAIT_FOR_FINISH:-""}
+EMCEE_BUILD_ID=${EMCEE_BUILD_ID:-""}
+EMCEE_RUN_COMMAND=${EMCEE_RUN_COMMAND:-""}
 
 ARGS=''
 
@@ -58,6 +60,14 @@ fi
 
 if [[ ! -z "$EMCEE_WAIT_FOR_FINISH" ]]; then
   ARGS="${ARGS} -w $EMCEE_WAIT_FOR_FINISH"
+fi
+
+if [[ ! -z "$EMCEE_BUILD_ID" ]]; then
+  ARGS="${ARGS} --build_id $EMCEE_BUILD_ID"
+fi
+
+if [[ ! -z "$EMCEE_RUN_COMMAND" ]]; then
+  ARGS="${ARGS} --run_command $EMCEE_RUN_COMMAND"
 fi
 
 echo 'Result ARGS: ${ARGS}'
