@@ -1,6 +1,6 @@
 FROM debian:12.6-slim
 
-ENV EMCEE_CLI_VERSION=0.0.2
+ENV EMCEE_CLI_VERSION=0.1.0
 ENV EMCEE_CLI_ARCHITECTURE=x86_64
 
 RUN apt-get update && apt-get -y install bash grep curl
