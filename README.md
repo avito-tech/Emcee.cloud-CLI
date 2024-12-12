@@ -43,4 +43,4 @@ chmod +x /usr/bin/emcee-cloud
 
 For quick reference you can use `emcee-cloud --help` command
 
-For more information check our [documentation](https://docs.emcee.cloud/cloud/api/)
+For more information check our [documentation](https://docs.emcee.cloud/cloud/integrations/cli/)
